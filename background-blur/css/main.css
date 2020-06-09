@@ -1,0 +1,38 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.layer2 {
+    width: 1800px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url('../images/bg-cover.jpg');
+    background-position: center;
+    transition: filter 0.5s ease-in-out;
+}
+
+.layer1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 800px;
+    height: 640px;
+    z-index: 1;
+    background: url('../images/bg-cover.jpg');
+    background-position: center;
+    transition: box-shadow 0.5s ease-in-out;
+}
+
+.layer1:hover {
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+}
+
+.layer1:hover ~ .layer2 {
+    filter: blur(10px);
+} 

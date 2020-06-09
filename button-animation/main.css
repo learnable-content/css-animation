@@ -1,0 +1,88 @@
+@import url('https://fonts.googleapis.com/css?family=Margarine');
+
+body {
+    color: #fff;
+    background-color: #3498db;
+}
+
+*:before, 
+*:after {
+    content: '';
+    position: absolute;
+}
+
+button {
+    background: transparent;
+    color: #fff;
+    border: 3px solid #fff;
+    border-radius: 50px;
+    padding: 13px 32px;
+    font: 24px "Margarine", cursive;
+    transition: all 0.2s ease-in-out;
+    position: relative;
+    letter-spacing: 2px;
+}
+
+button:hover {
+    background-color: orange;
+    color: #000;
+    cursor: pointer;
+}
+
+.button-hand {
+    margin-top: 250px;
+    text-align: center;
+}
+
+.button-hand button:before {
+    content: "👇";
+    font-size: 60px;
+    transform: scaleX(-1);
+    right: 0;
+    top:-68px;
+    animation: up-down 1s infinite;
+}
+
+.button-hand button .hands:before,
+.button-hand button .hands:after {
+    content: "👇";
+    font-size: 40px;  
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.button-hand button .hands:before {
+    transform: rotate(-60deg);
+    left: -45px;
+    top: -10px;
+}
+
+.button-hand button .hands:after {
+    transform: rotate(170deg);
+    right: 30px;
+    top: 50px;
+}
+
+.button-hand button:hover .hands:before {
+    opacity: 1;
+    left: -35px;
+}
+
+.button-hand button:hover .hands:after {
+    opacity: 1;
+    top: 40px;
+}
+
+@keyframes up-down {
+    0% {
+        margin-top: 0px;
+    }
+
+    50% {
+        margin-top: -20px;
+    }
+
+    100% {
+        margin-top: 0px;
+    }
+}

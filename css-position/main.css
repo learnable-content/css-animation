@@ -1,0 +1,59 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Exo+2:400,700');
+
+body {
+    background-color: royalblue;
+    font-family: 'Exo 2', sans-serif;
+}
+
+.parent {
+    background-color: white;
+    width: 600px;
+    height: 300px;
+    position: relative;
+}
+
+.square {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: absolute;
+    animation-name: speed;
+    animation-duration: 5s;
+    animation-timing-function: ease-in-out;
+    animation-delay: 0s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes speed {
+    0% {
+        background-color: red;
+        top: 0;
+        left:0;
+    }
+    35% {
+
+    }
+
+    50% {
+        background-color: blue;
+        top: 0;
+        left: 200px;
+        border-radius: 10px;
+    }
+
+    65% {
+        background-color: grey;
+    }
+
+    100% {
+        background-color: yellow;
+        top: 0;
+        left: 500px;
+    }
+}
